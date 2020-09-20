@@ -28,5 +28,10 @@
 
 .company-widget {
     display: inline-block;
+    margin: 15px;
     width: 200px;
+}
+
+.company-logo {
+    width: 75%;
 }
