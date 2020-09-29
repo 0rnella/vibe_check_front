@@ -1,0 +1,29 @@
+{
+  "intro": "We are an awesome team and we are so proud of this work",
+  "groupMembers" : [
+    {
+      "name": "Pamela",
+      "image": "",
+      "bio": "Pamela is awesome",
+      "link": "github.com/pyuli15"
+    }, 
+    {
+      "name": "Ornella",
+      "image": "",
+      "bio": "Ornella is awesome",
+      "link": "github.com/0rnella"
+    },
+    {
+      "name": "Malcolm",
+      "image": "",
+      "bio": "Malcolm is awesome",
+      "link": "linkedin.com/in/malcolm"
+    },
+    {
+      "name": "Medina",
+      "image": "",
+      "bio": "Medina is awesome",
+      "link": "linkedin.com/in/medina"
+    }
+  ]
+}
