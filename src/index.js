@@ -12,7 +12,7 @@ ReactDOM.render(
     <Router>
       <Route exact path='/about' component={About} />
       <Route exact path='/' component={Homepage}/>
-      <Route exact path ='/company' component={Company}/>
+      <Route path ='/company/:id' component={Company}/>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
