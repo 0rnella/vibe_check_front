@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import About from './components/About';
 import Homepage from './components/Homepage';
+import Company from './components/Company';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -11,6 +12,7 @@ ReactDOM.render(
     <Router>
       <Route exact path='/about' component={About} />
       <Route exact path='/' component={Homepage}/>
+      <Route exact path ='/company' component={Company}/>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
