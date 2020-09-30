@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import aboutData from '../about-page.json';
+import Header from './Header';
 
 function GroupMember (props) {
   return (
@@ -14,15 +15,18 @@ function GroupMember (props) {
 
 function AboutPage (props) {
   return (
-    <main>
-      <div className='intro' >
-        <p>{aboutData.intro}</p>
-      </div>
-      {aboutData.groupMembers.map(member => {
-        const { bio, name, image, link } = member;
-        return <GroupMember bio={bio} name={name} image={image} link={link} />;
-      })}
-    </main>
+    <Fragment>
+      <Header />
+      <main>
+        <div className='intro' >
+          <p>{aboutData.intro}</p>
+        </div>
+        {aboutData.groupMembers.map(member => {
+          const { bio, name, image, link } = member;
+          return <GroupMember key={name} bio={bio} name={name} image={image} link={link} />;
+        })}
+      </main>
+    </Fragment>
   );
 }
 

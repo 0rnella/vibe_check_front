@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/App.scss';
+import Nav from './Nav';
 
 function CompanyIcon (props) {
   return (
@@ -11,7 +12,7 @@ function CompanyIcon (props) {
   );
 }
 
-class App extends React.Component {
+class Homepage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -35,15 +36,13 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>Vibe Check</h1>
-          <nav>
-            <a href="/">About Us</a>
-          </nav>
+          <Nav />
           <p>Tagline</p>
         </header>
         <div className="icon-group">
           {this.state.companiesData.map(company => {
             const { logo, name } = company;
-            return <CompanyIcon imageSource={logo} name={name} />;
+            return <CompanyIcon key={name} imageSource={logo} name={name} />;
           })}
         </div>
       </div>
@@ -51,4 +50,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Homepage;
