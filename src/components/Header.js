@@ -3,7 +3,7 @@ import Nav from './Nav';
 
 function Header (props) {
   return(<header>
-    <h1>Vibe Check</h1>
+    <h2>Vibe Check</h2>
     <Nav />
   </header>);
 }

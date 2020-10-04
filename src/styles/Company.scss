@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(215,215,215);
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.page-header {
+  width: 150px;
+  margin-left: 20px;
+  background-color: rgba($color: #e9c6c6, $alpha: 0.75);
+}
+
+.company {
+  margin: 80px;
+  text-align: center;
+}
+
+.company-logo {
+  width: 200px;
+}
+
+.company-snapshot {
+  text-align: center;
+  background-color: rgba($color: #776c6c, $alpha: 0.75);
+  padding:30px;
+}
+
+
+
