@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Homepage.scss';
+import '../styles/App.scss';
 import Nav from './Nav';
 
 function CompanyIcon (props) {
