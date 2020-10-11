@@ -1,20 +1,7 @@
 @import './variables.scss';
+@import './global.scss';
 
-body {
-  color: $text;
-  margin: 0;
-  font-family: $sans-serif-font;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-}
-
-main {
-  max-width: 1400px;
-}
-
-code {
-  font-family: $code-font;
-}
+@import './Nav.scss';
+@import './Header.scss';
 
 @import './Homepage.scss';

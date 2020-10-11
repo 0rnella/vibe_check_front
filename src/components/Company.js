@@ -3,8 +3,8 @@ import Header from './Header';
 import '../styles/Company.scss';
 
 function CompanyInfo (props) {
-<<<<<<< HEAD
-  return (
+  const { companyData } = props;
+  return companyData ? (
     <Fragment>
       <div className="company">
         {/* In terms of hierarchy, props/companyData/Data we fetched for individual company */}
@@ -46,18 +46,7 @@ function CompanyInfo (props) {
     </Fragment>
     
     
-  );
-=======
-  const { companyData } = props;
-  return companyData ? (
-    <section className="company">
-      {/* In terms of hierarchy, props/companyData/Data we fetched for individual company */}
-      <h2 className="company-name"> {companyData.name}</h2>
-      <img className="company-logo" src={companyData.logo} alt={props.companyData.name + " logo"}/>
-      <h3 className="company-rating"> {companyData.rating}</h3>
-    </section>
-  ) : <p>Sorry, no information was found.</p>;
->>>>>>> Cleanup Company page html
+  ): <p>Sorry, no information was found.</p>;
 }
 class Company extends React.Component {
   constructor (props) {
@@ -82,8 +71,6 @@ class Company extends React.Component {
         
   }
   render () {
-    console.log('this.props', this.props); 
-    console.log('company id', this.props.match.params); 
     return (
       <main className="Company">
         <Header/>
