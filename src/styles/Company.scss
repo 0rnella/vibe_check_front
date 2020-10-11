@@ -18,9 +18,13 @@ h1 {
   width: 200px;
 }
 
+.category {
+  padding: 15px;
+  border-bottom: 2px solid turquoise;
+}
 .company-snapshot {
   text-align: center;
-  background-color: rgba($color: #776c6c, $alpha: 0.75);
+  background-color: turquoise;
   padding:30px;
 }
 
