@@ -20,9 +20,9 @@ function AboutPage (props) {
     <Fragment>
       <Header />
       <main>
-        <div className='intro' >
-          <p>{aboutData.intro}</p>
-        </div>
+        <h2>About</h2>
+        <p>{aboutData.intro}</p>
+        <h2>The team</h2>
         {aboutData.groupMembers.map(member => {
           const { bio, name, image, link } = member;
           return <GroupMember key={name} bio={bio} name={name} image={image} link={link} />;
