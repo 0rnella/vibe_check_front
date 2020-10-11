@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import Header from './Header';
 import { CategorySection } from './CategorySections';
-import '../styles/Company.scss';
 
 function CompanyInfo (props) {
   const { companyData } = props;
@@ -11,7 +10,7 @@ function CompanyInfo (props) {
     <main>
       <div className="company">
         <h1 className="company-name"> {props.companyData.name}</h1>
-        <img className="company-logo" src={props.companyData.logo} alt={props.companyData.name + " logo"}/>
+        <img className="single-company-logo" src={props.companyData.logo} alt={props.companyData.name + " logo"}/>
         <h3 className="company-rating"> {props.companyData.rating}</h3>
       </div>
       <section className="category company-snapshot">

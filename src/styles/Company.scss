@@ -14,17 +14,17 @@ h1 {
   text-align: center;
 }
 
-.company-logo {
+.single-company-logo {
   width: 200px;
 }
 
 .category {
   padding: 15px;
-  border-bottom: 2px solid turquoise;
+  border-bottom: 2px solid $accent;
 }
 .company-snapshot {
   text-align: center;
-  background-color: turquoise;
+  background-color: $accent;
   padding:30px;
 }
 

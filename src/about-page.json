@@ -1,28 +1,28 @@
 {
-  "intro": "We are an awesome team and we are so proud of this work",
+  "intro": "We are an awesome team and we are so proud of this work.\nWhat's up?",
   "groupMembers" : [
     {
       "name": "Pamela",
-      "image": "",
-      "bio": "Pamela is awesome",
+      "image": "/Pamela_headshot.jpeg",
+      "bio": "Pamela is a self-taught Front-End Developer, who graduated from New York University with a major in Storytelling Through Video Games. Currently, she’s working to become a Software Engineer. In her free time, she loves cooking and baking as well as playing and creating video games.",
       "link": "github.com/pyuli15"
     }, 
     {
       "name": "Ornella",
       "image": "",
-      "bio": "Ornella is awesome",
+      "bio": "Ornella works as a developer. She is driven by questions of justice, access and care. She likes to code solutions to problems she encounters in her and others' lives. She usually does her best.",
       "link": "github.com/0rnella"
     },
     {
       "name": "Malcolm",
-      "image": "",
-      "bio": "Malcolm is awesome",
+      "image": "/Malcolm_headshot.jpg",
+      "bio": "Malcolm is a product manager, working to build products that work for everyone. He seeks to bring inclusion, diversity, equity, and accessibility into all his work and to make tech more ethical. As a trained creative, he finds himself most engaged by tech that has provided a unique solution to a common problem.",
       "link": "linkedin.com/in/malcolm"
     },
     {
       "name": "Medina",
       "image": "",
-      "bio": "Medina is awesome",
+      "bio": "Medina is a graduating senior at Barnard College of Columbia University studying the intersections of psychology, race, and gender. She plans on using her love for spirituality, positive psychology, and poetry to heal people and systems around the world.",
       "link": "linkedin.com/in/medina"
     }
   ]

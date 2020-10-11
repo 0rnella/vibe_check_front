@@ -5,10 +5,12 @@ import Header from './Header';
 function GroupMember (props) {
   return (
     <div className='group-member'>
-      <h3>{props.name}</h3>
-      <img className='member-pic' alt={props.name} src={props.image} />
-      <p>{props.bio}</p>
-      <a href={props.link} >Get in touch</a>
+      {props.image && <img className='member-pic' alt={props.name} src={props.image} />}
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.bio}</p>
+        <a href={props.link} >Get in touch</a>
+      </div>
     </div>
   );
 }

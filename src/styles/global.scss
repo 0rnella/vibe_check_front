@@ -5,11 +5,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  white-space: pre-line;
 }
 
 a {
   color: $text;
-  text-decoration: underline turquoise solid;
+  text-decoration: underline $accent solid;
 }
 
 main {
