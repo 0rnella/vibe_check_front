@@ -1,20 +1,21 @@
 import React, { Fragment } from 'react';
 import Header from './Header';
-import '../styles/Company.scss';
+import { CategorySection } from './CategorySections';
 
 function CompanyInfo (props) {
-  return (
-    <Fragment>
+  const { companyData } = props;
+  const { effectOnEcosystem, politicalContributions, laborPractices, lawsuits, demographics } = companyData;
+  console.log(companyData);
+  return companyData ? (
+    <main>
       <div className="company">
-        {/* In terms of hierarchy, props/companyData/Data we fetched for individual company */}
         <h1 className="company-name"> {props.companyData.name}</h1>
-        <img className="company-logo" src={props.companyData.logo} alt={props.companyData.name + " logo"}/>
-        {/* <h3> {props.companyData.industry}</h3> */}
+        <img className="single-company-logo" src={props.companyData.logo} alt={props.companyData.name + " logo"}/>
         <h3 className="company-rating"> {props.companyData.rating}</h3>
       </div>
-      <div className="company-snapshot">
+      <section className="category company-snapshot">
         <div className="company-description">
-          <h4> {props.companyData.description}</h4>
+          <p> {props.companyData.description}</p>
         </div>
         <div className="company-history">
           <h4>Year Founded: {props.companyData.yearFounded}</h4>
@@ -25,28 +26,16 @@ function CompanyInfo (props) {
         <div className="annual-revenue">
           <h4>Annual Net Revenue: ${props.companyData.annualNetRevenue}</h4>
         </div>
-      </div>
-      <div className="demographics">
-        <h1>Demographics</h1>
-      </div>
-      <div className="labor-practices">
-        <h1>Labor Practices</h1>
-      </div>
-      <div className="lawsuits">
-        <h1>Lawsuits</h1>
-      </div>
-      <div className="political-contributions">
-        <h1>Political Contributions</h1>
-      </div>
-      <div className="effects-on-ecosystem">
-        <h1>Effects on Ecosystem</h1>
-      </div>
-      
-    </Fragment>
-    
-    
-  );
+      </section>
+      {effectOnEcosystem && <CategorySection categoryName='Effects on Ecosystem' categoryData={effectOnEcosystem} styling='effects-on-ecosystem' />}
+      {politicalContributions && <CategorySection categoryName='Political Contributions' categoryData={politicalContributions} styling='political-contributions' />}
+      {laborPractices && <CategorySection categoryName='Labor Practices' categoryData={laborPractices} styling='labor-practices' />}
+      {lawsuits && <CategorySection categoryName='Lawsuits' categoryData={lawsuits} styling='lawsuits' />}
+      {demographics && <CategorySection categoryName='Demographics' categoryData={demographics} styling='demographics' />}
+    </main>
+  ): <main>Sorry, no information was found.</main>;
 }
+
 class Company extends React.Component {
   constructor (props) {
     super(props);
@@ -70,18 +59,11 @@ class Company extends React.Component {
         
   }
   render () {
-    console.log('this.props', this.props); 
-    console.log('company id', this.props.match.params); 
     return (
-      <div className="Company">
-        <div className="page-header">
-          <Header/>
-        </div>
-        <div className="company-spotlight">
-          {/* creating a companyInfo component */}
-          <CompanyInfo companyData={this.state.companyData}/>
-        </div>
-      </div>
+      <Fragment>
+        <Header/>
+        <CompanyInfo companyData={this.state.companyData}/>
+      </Fragment>
     );
   }
 }

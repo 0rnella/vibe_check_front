@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Homepage.scss';
+import { Link } from 'react-router-dom';
 import Nav from './Nav';
 
 function CompanyIcon (props) {
@@ -37,12 +37,14 @@ class Homepage extends React.Component {
         <header className="App-header">
           <h1>Vibe Check</h1>
           <Nav />
-          <p>Tagline</p>
+          <p>Find out what your favorite companies are really about.</p>
         </header>
         <div className="icon-group">
           {this.state.companiesData.map(company => {
-            const { logo, name } = company;
-            return <CompanyIcon key={name} imageSource={logo} name={name} />;
+            const { logo, name, id, rating } = company;
+            return (<Link to={`/company/${id}`} key={name}>
+              <CompanyIcon imageSource={logo} name={name} rating={rating} />
+            </Link>);
           })}
         </div>
       </div>
