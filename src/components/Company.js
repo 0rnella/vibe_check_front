@@ -2,38 +2,12 @@ import React, { Fragment } from 'react';
 import Header from './Header';
 import { CategorySection } from './CategorySections';
 import { VictoryPie } from 'victory';
+import { getDemoPieChartData } from '../utils/index';
 
 function CompanyInfo (props) {
   const { companyData } = props;
-  const { effectOnEcosystem, politicalContributions, laborPractices, lawsuits, demographics={} } = companyData;
-  console.log(companyData);
-  const manualArray = [{ x: "white", y: 0.2 },
-    { x: "black", y: 0.2 },
-    { x: "native", y: 0.2 },
-    { x: "latinx", y: 0.2 },
-    { x: "asian", y: 0.2 },
-    { x: "otherMixedRace", y: 0.2 },
-    { x: "women", y: 0.33 },
-    { x: "men", y: 0.33 },
-    { x: "otherGender", y: 0.33 }];
-
-  //get into demographics object
-  //demographics {asian : 0.2 , black: 0.2}
-  //demographicsData[{x: "asian", y: 0.2}, {x: "black", y: 0.2}]
-  const demoKeys = Object.keys(demographics);
-  const filteredKeys = demoKeys.filter(key => key !== 'sources' && key !== "employeePopulation");
-  console.log(filteredKeys);
-  //demoKeys["asian", "black"]
-  //foo => {x: foo, y:demographics.foo }
-  const stringToObject = (identifier) => {
-    const pieChartThing = { x: identifier, y: demographics[identifier] };
-    return (pieChartThing);
-  };
-  //take out appropriate data from demographic object
-  const demoPieChartData = filteredKeys.map(stringToObject);
-  console.log("Demo Keys Map", demoPieChartData);
-  console.log("Manual Array", manualArray);
-  //put data into demographicsData array
+  const { effectOnEcosystem, politicalContributions, laborPractices, lawsuits, demographics } = companyData;
+  const demoPieChartData = getDemoPieChartData(demographics);
 
   return companyData ? (
     <main>
@@ -62,18 +36,7 @@ function CompanyInfo (props) {
       {lawsuits && <CategorySection categoryName='Lawsuits' categoryData={lawsuits} styling='lawsuits' />}
       {demographics && <CategorySection categoryName='Demographics' categoryData={demographics} styling='demographics' />}
       
-      <VictoryPie data={manualArray}/>
-      {/* <VictoryPie data={[
-        { x: "white", y: 0.2 },
-        { x: "black", y: 0.2 },
-        { x: "native", y: 0.2 },
-        { x: "latinx", y: 0.2 },
-        { x: "asian", y: 0.2 },
-        { x: "otherMixedRace", y: 0.2 },
-        { x: "women", y: 0.33 },
-        { x: "men", y: 0.33 },
-        { x: "otherGender", y: 0.33 }
-      ]}/> */}
+      {demoPieChartData.length && <VictoryPie data={demoPieChartData}/>}
     </main>
   ): <main>Sorry, no information was found.</main>;
 }
