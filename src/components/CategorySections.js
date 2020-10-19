@@ -1,5 +1,6 @@
 import React from 'react';
 import startCase from 'lodash.startcase';
+// import * as V from 'victory';
 
 export const CategorySection = (props) => {
   const { categoryName, categoryData, styling } = props;
