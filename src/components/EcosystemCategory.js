@@ -17,10 +17,12 @@ const EcosystemCategory = (props) => {
 
   return (
     <section className={`category ecosystem ${styling}`}>
-      <h3>effects on ecosystem: {categoryData.rating}</h3>
-      <h4>racial demographics</h4>
-      <div className='before-after'>
-        <div className='chart-wrapper half'>
+      <h3>Effects on ecosystem: {categoryData.rating}</h3>
+
+      <h4>Racial demographics</h4>
+      <p>{categoryData.racialDemographicNarrative}</p>
+      <div className='grid'>
+        <div className='item'>
           <h5>HQ city before founding ({categoryData.firstCensusYear})</h5>
           <VictoryPie
             data={demoStartPie}
@@ -28,7 +30,7 @@ const EcosystemCategory = (props) => {
           />
         </div>
 
-        <div className='chart-wrapper half'>
+        <div className='item'>
           <h5>HQ city currently ({categoryData.currentCensusYear})</h5>
           <VictoryPie
             data={demoStartPie}
@@ -36,19 +38,24 @@ const EcosystemCategory = (props) => {
           />
         </div>
       </div>
-      <h4>average household income of HQ city</h4>
-      <div className='before-after'>
-        <h5 className='half'>average household income before founding ({categoryData.firstCensusYear}): 
-          <span className='number'> {categoryData.averageHouseholdIncomeAtStart}</span>
-        </h5>
 
-        <h5 className='half'>average household income currently ({categoryData.firstCensusYear}): 
-          <span className='number'> {categoryData.averageHouseholdIncomeNow}</span>
-        </h5>
+
+      <h4>Average household income</h4>
+      <div className='grid'>
+        <div className='item'>
+          <h5>HQ city before founding ({categoryData.firstCensusYear}): </h5>
+          <span className='number'>${categoryData.averageHouseholdIncomeAtStart}</span>
+        </div>
+
+        <div className='item'>
+          <h5>HQ city currently ({categoryData.firstCensusYear}): </h5>
+          <span className='number'>${categoryData.averageHouseholdIncomeNow}</span>
+        </div>
       </div>
-      <h4 className='jobs'>jobs created:
-        <span className='number'> {categoryData.jobsCreated}</span>
-      </h4>
+
+      <h4 className='jobs'>Jobs created: </h4>
+      <p className='number'>{categoryData.jobsCreated}</p>
+
       <h4>sources:</h4>
       <ul>
         <li>{categoryData.racialDemographicAtStartSource}</li>

@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import Header from './Header';
 import { CategorySection } from './CategorySections';
 import EcosystemCategory from './EcosystemCategory';
+import LawsuitsCategory from './LawsuitsCategory';
 
 function CompanyInfo (props) {
   const { companyData } = props;
@@ -24,7 +25,7 @@ function CompanyInfo (props) {
       </section>
       {effectOnEcosystem && <EcosystemCategory categoryData={effectOnEcosystem}/> }
       {politicalContributions && <CategorySection categoryName='Political Contributions' categoryData={politicalContributions} />}
-      {lawsuits && <CategorySection categoryName='Lawsuits' categoryData={lawsuits} />}
+      {lawsuits && <LawsuitsCategory categoryData={lawsuits} />}
       {demographics && <CategorySection categoryName='Demographics' categoryData={demographics} />}
       
     </main>

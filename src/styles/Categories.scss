@@ -4,29 +4,55 @@
   text-align: left;
   border: 4px solid black;
   border-radius: 8px;
-}
 
-.ecosystem {
-  .before-after {
+  // &.company-snapshot {
+  //   border: none;
+  // }
+
+  &.lawsuits {
+    .grid {
+      text-align: center;
+      .item  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+          width: 200px;
+        }
+      }
+    }
+    .number {
+      background-color: $accent;
+      height: 200px;
+      width: 200px;
+      line-height: 200px;
+      text-align: center;
+      border-radius: 50%;
+    }
+  }
+
+  .grid {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
-    .half {
+    .item {
       width: 50%;
     }
   }
 
   .number {      
-    font-size: 1.5em;
+    font-size: 2em;
   }
 }
 
 @include mobile {
-  .ecosystem {
-    .before-after {
+  .category {
+    .grid {
       flex-direction: column;
 
-      .half {
+      .item {
         width: 100%;
       }
     }
