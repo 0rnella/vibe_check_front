@@ -2,38 +2,28 @@ import React, { Fragment } from 'react';
 import Header from './Header';
 import { CategorySection } from './CategorySections';
 import EcosystemCategory from './EcosystemCategory';
-import { VictoryPie } from 'victory';
-import { getPieChartData } from '../utils/index';
 
 function CompanyInfo (props) {
   const { companyData } = props;
-  const { effectOnEcosystem, politicalContributions, laborPractices, lawsuits, demographics } = companyData;
-  const demoPieChartData = getPieChartData(demographics);
+  const { effectOnEcosystem, politicalContributions, lawsuits, demographics } = companyData;
 
   return companyData ? (
     <main>
-      <div className="company">
-        <h1 className="company-name"> {props.companyData.name}</h1>
-        <img className="single-company-logo" src={props.companyData.logo} alt={props.companyData.name + " logo"}/>
-        <h3 className="company-rating"> {props.companyData.rating}</h3>
-      </div>
+      <section className="company-header">
+        <img className="single-company-logo" src={props.companyData.logo} alt={`${props.companyData.name} logo`}/>
+        <div>
+          <h1 className="company-name">{props.companyData.name}</h1>
+          <h4 className="company-rating">Rating: {props.companyData.rating}</h4>
+        </div>
+      </section>
       <section className="category company-snapshot">
-        <div className="company-description">
-          <p> {props.companyData.description}</p>
-        </div>
-        <div className="company-history">
-          <h4>Year Founded: {props.companyData.yearFounded}</h4>
-        </div>
-        <div className="company-ceo">
-          <h4>Current CEO: {props.companyData.currentCEO}</h4>
-        </div>
-        <div className="annual-revenue">
-          <h4>Annual Net Revenue: ${props.companyData.annualNetRevenue}</h4>
-        </div>
+        <p> {props.companyData.description}</p>
+        <h4>Year Founded: {props.companyData.yearFounded}</h4>
+        <h4>Current CEO: {props.companyData.currentCEO}</h4>
+        <h4>Annual Net Revenue: ${props.companyData.annualNetRevenue}</h4>
       </section>
       {effectOnEcosystem && <EcosystemCategory categoryData={effectOnEcosystem}/> }
       {politicalContributions && <CategorySection categoryName='Political Contributions' categoryData={politicalContributions} />}
-      {laborPractices && <CategorySection categoryName='Labor Practices' categoryData={laborPractices} />}
       {lawsuits && <CategorySection categoryName='Lawsuits' categoryData={lawsuits} />}
       {demographics && <CategorySection categoryName='Demographics' categoryData={demographics} />}
       

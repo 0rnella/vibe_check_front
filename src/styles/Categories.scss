@@ -7,21 +7,26 @@
 }
 
 .ecosystem {
-  .racial {
+  .before-after {
     display: flex;
+    justify-content: space-between;
 
-    .chart-wrapper {
+    .half {
       width: 50%;
     }
+  }
+
+  .number {      
+    font-size: 1.5em;
   }
 }
 
 @include mobile {
   .ecosystem {
-    .racial {
+    .before-after {
       flex-direction: column;
-  
-      .chart-wrapper {
+
+      .half {
         width: 100%;
       }
     }

@@ -17,10 +17,10 @@ const EcosystemCategory = (props) => {
 
   return (
     <section className={`category ecosystem ${styling}`}>
-      <h3>Effects on Ecosystem: {categoryData.rating}</h3>
-      <h4>Racial Demographics</h4>
-      <div className='racial'>
-        <div className='chart-wrapper'>
+      <h3>effects on ecosystem: {categoryData.rating}</h3>
+      <h4>racial demographics</h4>
+      <div className='before-after'>
+        <div className='chart-wrapper half'>
           <h5>HQ city before founding ({categoryData.firstCensusYear})</h5>
           <VictoryPie
             data={demoStartPie}
@@ -28,7 +28,7 @@ const EcosystemCategory = (props) => {
           />
         </div>
 
-        <div className='chart-wrapper'>
+        <div className='chart-wrapper half'>
           <h5>HQ city currently ({categoryData.currentCensusYear})</h5>
           <VictoryPie
             data={demoStartPie}
@@ -36,6 +36,27 @@ const EcosystemCategory = (props) => {
           />
         </div>
       </div>
+      <h4>average household income of HQ city</h4>
+      <div className='before-after'>
+        <h5 className='half'>average household income before founding ({categoryData.firstCensusYear}): 
+          <span className='number'> {categoryData.averageHouseholdIncomeAtStart}</span>
+        </h5>
+
+        <h5 className='half'>average household income currently ({categoryData.firstCensusYear}): 
+          <span className='number'> {categoryData.averageHouseholdIncomeNow}</span>
+        </h5>
+      </div>
+      <h4 className='jobs'>jobs created:
+        <span className='number'> {categoryData.jobsCreated}</span>
+      </h4>
+      <h4>sources:</h4>
+      <ul>
+        <li>{categoryData.racialDemographicAtStartSource}</li>
+        <li>{categoryData.racialDemographicNowSource}</li>
+        <li>{categoryData.averageHouseholdIncomeAtStartSource}</li>
+        <li>{categoryData.averageHouseholdIncomeNowSource}</li>
+        <li>{categoryData.jobsCreatedSource}</li>
+      </ul>
     </section>
   );
 };

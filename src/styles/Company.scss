@@ -9,9 +9,11 @@ h1 {
   background-color: rgba($color: #e9c6c6, $alpha: 0.75);
 }
 
-.company {
-  margin: 80px;
-  text-align: center;
+.company-header {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .single-company-logo {
