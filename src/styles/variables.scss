@@ -7,3 +7,12 @@ sans-serif;
 // Colors
 $text: black;
 $accent: turquoise;
+
+// Mobile setup
+$mobile: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+      @content;
+  }
+}

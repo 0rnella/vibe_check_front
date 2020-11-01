@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
 import Header from './Header';
 import { CategorySection } from './CategorySections';
+import EcosystemCategory from './EcosystemCategory';
 import { VictoryPie } from 'victory';
-import { getDemoPieChartData } from '../utils/index';
+import { getPieChartData } from '../utils/index';
 
 function CompanyInfo (props) {
   const { companyData } = props;
   const { effectOnEcosystem, politicalContributions, laborPractices, lawsuits, demographics } = companyData;
-  const demoPieChartData = getDemoPieChartData(demographics);
+  const demoPieChartData = getPieChartData(demographics);
 
   return companyData ? (
     <main>
@@ -30,13 +31,12 @@ function CompanyInfo (props) {
           <h4>Annual Net Revenue: ${props.companyData.annualNetRevenue}</h4>
         </div>
       </section>
-      {effectOnEcosystem && <CategorySection categoryName='Effects on Ecosystem' categoryData={effectOnEcosystem} styling='effects-on-ecosystem'/> }
-      {politicalContributions && <CategorySection categoryName='Political Contributions' categoryData={politicalContributions} styling='political-contributions' />}
-      {laborPractices && <CategorySection categoryName='Labor Practices' categoryData={laborPractices} styling='labor-practices' />}
-      {lawsuits && <CategorySection categoryName='Lawsuits' categoryData={lawsuits} styling='lawsuits' />}
-      {demographics && <CategorySection categoryName='Demographics' categoryData={demographics} styling='demographics' />}
+      {effectOnEcosystem && <EcosystemCategory categoryData={effectOnEcosystem}/> }
+      {politicalContributions && <CategorySection categoryName='Political Contributions' categoryData={politicalContributions} />}
+      {laborPractices && <CategorySection categoryName='Labor Practices' categoryData={laborPractices} />}
+      {lawsuits && <CategorySection categoryName='Lawsuits' categoryData={lawsuits} />}
+      {demographics && <CategorySection categoryName='Demographics' categoryData={demographics} />}
       
-      {demoPieChartData.length && <VictoryPie data={demoPieChartData}/>}
     </main>
   ): <main>Sorry, no information was found.</main>;
 }

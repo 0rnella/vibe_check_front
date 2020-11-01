@@ -12,6 +12,8 @@ export const CategorySection = (props) => {
       <h3>{categoryName}</h3>
       {keys.map(key => <p key={key}><b>{startCase(key)}</b>: {categoryData[key]}</p>)}
     </section>);
+  } else  {
+    return null;
   }
 };
 

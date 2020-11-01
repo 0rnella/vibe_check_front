@@ -1,11 +1,10 @@
-export const getDemoPieChartData = (demographics = {}) => {
-  const demoKeys = Object.keys(demographics);
-  const filteredKeys = demoKeys.filter(key => key !== 'sources' && key !== "employeePopulation");
+export const getPieChartData = (data = {}) => {
+  const keys = Object.keys(data);
   const stringToObject = (identifier) => {
-    const pieChartThing = { x: identifier, y: demographics[identifier] };
-    return (pieChartThing);
+    const xyObject = { x: identifier, y: data[identifier] };
+    return (xyObject);
   };
-  const demoPieChartData = filteredKeys.map(stringToObject);
+  const pieChartData = keys.map(stringToObject);
 
-  return demoPieChartData;
+  return pieChartData;
 };
