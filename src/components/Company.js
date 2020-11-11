@@ -27,7 +27,6 @@ function CompanyInfo (props) {
       {politicalContributions && <CategorySection categoryName='Political Contributions' categoryData={politicalContributions} />}
       {lawsuits && <LawsuitsCategory categoryData={lawsuits} />}
       {demographics && <CategorySection categoryName='Demographics' categoryData={demographics} />}
-      
     </main>
   ): <main>Sorry, no information was found.</main>;
 }
