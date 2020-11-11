@@ -13,6 +13,16 @@ const EcosystemCategory = (props) => {
     multiracial: categoryData.multiracialStart,
   };
   const demoStartPie = getPieChartData(demoStart);
+
+  const demoNow = {
+    white: categoryData.whiteNow,
+    black: categoryData.blackNow,
+    asian: categoryData.asianNow,
+    indigenous: categoryData.indigenousNow,
+    multiracial: categoryData.multiracialNow,
+  };
+  const demoNowPie = getPieChartData(demoNow);
+
   const colorScale = ["D8A48F", "4D4D3F", "EFEBCE",  "A3A380", "6F493D" ];
 
   return (
@@ -24,18 +34,18 @@ const EcosystemCategory = (props) => {
       <div className='grid'>
         <div className='item'>
           <h5>HQ city before founding ({categoryData.firstCensusYear})</h5>
-          <VictoryPie
+          {demoStartPie.length ? <VictoryPie
             data={demoStartPie}
             colorScale={colorScale}
-          />
+          /> : 'We were not able to find data.'}
         </div>
 
         <div className='item'>
           <h5>HQ city currently ({categoryData.currentCensusYear})</h5>
-          <VictoryPie
-            data={demoStartPie}
+          {demoNowPie.length ? <VictoryPie
+            data={demoNowPie}
             colorScale={colorScale}
-          />
+          /> : 'We were not able to find data.'}
         </div>
       </div>
 
@@ -44,12 +54,18 @@ const EcosystemCategory = (props) => {
       <div className='grid'>
         <div className='item'>
           <h5>HQ city before founding ({categoryData.firstCensusYear}): </h5>
-          <span className='number'>${categoryData.averageHouseholdIncomeAtStart}</span>
+          {categoryData.averageHouseholdIncomeAtStart ?
+            <span className='number'>${categoryData.averageHouseholdIncomeAtStart}</span>
+            : <span>We were not able to find data.</span>
+          }
         </div>
 
         <div className='item'>
-          <h5>HQ city currently ({categoryData.firstCensusYear}): </h5>
-          <span className='number'>${categoryData.averageHouseholdIncomeNow}</span>
+          <h5>HQ city currently ({categoryData.currentCensusYear}): </h5>
+          {categoryData.averageHouseholdIncomeNow ?
+            <span className='number'>${categoryData.averageHouseholdIncomeNow}</span>
+            : <span>We were not able to find data.</span>
+          }
         </div>
       </div>
 

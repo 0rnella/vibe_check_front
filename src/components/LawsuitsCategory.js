@@ -11,19 +11,27 @@ const LawsuitsCategory = (props) => {
       <div className='grid'>
         <div className='item'>
           <h4>Average number of <b>lawsuits</b> per year</h4>
-          <p className='number'>{categoryData.averageLawsuitsPerYear}</p>
+          {categoryData.averageLawsuitsPerYear?
+            <p className='number'>{categoryData.averageLawsuitsPerYear}</p>
+            : 'We were not able to find data.'}
         </div>
         <div className='item'>
           <h4>Average number of <b>settlements</b> per year</h4>
-          <p className='number'>{categoryData.averageSettlementsPerYear}</p>
+          {categoryData.averageSettlementsPerYear ?
+            <p className='number'>{categoryData.averageSettlementsPerYear}</p>
+            : 'We were not able to find data.'}
         </div>
         <div className='item'>
           <h4>Average number of <b>civil lawsuits</b> per year</h4>
-          <p className='number'>{categoryData.averageCivilLawsuits}</p>
+          {categoryData.averageCivilLawsuits?
+            <p className='number'>{categoryData.averageCivilLawsuits}</p>
+            : 'We were not able to find data.'}
         </div>
         <div className='item'>
           <h4>Average <b>amount</b> spent on each settlement</h4>
-          <p className='number'>${categoryData.averageAmountOfSettlement}</p>
+          {categoryData.averageAmountOfSettlement?
+            <p className='number'>${categoryData.averageAmountOfSettlement}</p>
+            : 'We were not able to find data.'}
         </div>
       </div>
 

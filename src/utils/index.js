@@ -4,7 +4,7 @@ export const getPieChartData = (data = {}) => {
     const xyObject = { x: identifier, y: data[identifier] };
     return (xyObject);
   };
-  const pieChartData = keys.map(stringToObject);
+  const pieChartData = keys.map(stringToObject).filter(object => !!object.y);
 
   return pieChartData;
 };
