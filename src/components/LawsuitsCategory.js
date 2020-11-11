@@ -37,6 +37,7 @@ const LawsuitsCategory = (props) => {
 
       <h4>Sources:</h4>
       <ul>
+        <li>{categoryData.lawsuitsSource}</li>
       </ul>
     </section>
   );
