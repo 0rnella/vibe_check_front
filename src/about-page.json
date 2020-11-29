@@ -9,7 +9,7 @@
     }, 
     {
       "name": "Ornella",
-      "image": "",
+      "image": "/Ornella_headshot.jpeg",
       "bio": "Ornella works as a developer. She is driven by questions of justice, access and care. She likes to code solutions to problems she encounters in her and others' lives. She usually does her best.",
       "link": "github.com/0rnella"
     },
@@ -21,7 +21,7 @@
     },
     {
       "name": "Medina",
-      "image": "",
+      "image": "/Medina_headshot.jpg",
       "bio": "Medina is a graduating senior at Barnard College of Columbia University studying the intersections of psychology, race, and gender. She plans on using her love for spirituality, positive psychology, and poetry to heal people and systems around the world.",
       "link": "linkedin.com/in/medina"
     }

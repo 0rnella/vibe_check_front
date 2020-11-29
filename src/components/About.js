@@ -6,7 +6,7 @@ function GroupMember (props) {
   return (
     <div className='group-member'>
       {props.image && <img className='member-pic' alt={props.name} src={props.image} />}
-      <div>
+      <div className='member-bio'>
         <h3>{props.name}</h3>
         <p>{props.bio}</p>
         <a href={props.link} >Get in touch</a>
