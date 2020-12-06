@@ -3,6 +3,7 @@ import Header from './Header';
 import { CategorySection } from './CategorySections';
 import EcosystemCategory from './EcosystemCategory';
 import LawsuitsCategory from './LawsuitsCategory';
+import DemographicsCategory from './DemographicsCategory';
 
 function CompanyInfo (props) {
   const { companyData } = props;
@@ -23,10 +24,10 @@ function CompanyInfo (props) {
         <h4>Current CEO: {props.companyData.currentCEO}</h4>
         <h4>Annual Net Revenue: ${props.companyData.annualNetRevenue}</h4>
       </section>
+      {demographics && <DemographicsCategory categoryData={demographics}/> }
       {effectOnEcosystem && <EcosystemCategory categoryData={effectOnEcosystem}/> }
       {politicalContributions && <CategorySection categoryName='Political Contributions' categoryData={politicalContributions} />}
       {lawsuits && <LawsuitsCategory categoryData={lawsuits} />}
-      {demographics && <CategorySection categoryName='Demographics' categoryData={demographics} />}
     </main>
   ): <main>Sorry, no information was found.</main>;
 }
