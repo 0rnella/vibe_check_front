@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { VictoryPie } from 'victory';
 import { getPieChartData } from '../utils/index';
+import startCase from 'lodash.startcase';
 
 
 const DemographicsCategory = (props) => {
@@ -37,21 +38,21 @@ const DemographicsCategory = (props) => {
 
       {pieChartData.map(data => (
         <Fragment key={data.population}>
-          <h4>{data.population}:</h4>
+          <h4>{startCase(data.population)}:</h4>
 
           <div className="grid">
             <div className='item'>
 
               <h5>Race</h5>
               {data.race.length ? 
-                <VictoryPie data={data.race} colorScale={raceColorScale} /> :
+                <VictoryPie data={data.race} colorScale={raceColorScale} padding={70} /> :
                 'We were not able to find data.'}
             </div>
 
             <div className='item'>
               <h5>Gender</h5>
               {data.gender.length ? 
-                <VictoryPie data={data.gender} colorScale={genderColorScale} /> :
+                <VictoryPie data={data.gender} colorScale={genderColorScale} padding={70} /> :
                 'We were not able to find data.'}
             </div>
           </div>

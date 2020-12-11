@@ -4,6 +4,7 @@ import { CategorySection } from './CategorySections';
 import EcosystemCategory from './EcosystemCategory';
 import LawsuitsCategory from './LawsuitsCategory';
 import DemographicsCategory from './DemographicsCategory';
+import PoliticsCategory from './PoliticsCategory';
 
 function CompanyInfo (props) {
   const { companyData } = props;
@@ -26,7 +27,7 @@ function CompanyInfo (props) {
       </section>
       {demographics && <DemographicsCategory categoryData={demographics}/> }
       {effectOnEcosystem && <EcosystemCategory categoryData={effectOnEcosystem}/> }
-      {politicalContributions && <CategorySection categoryName='Political Contributions' categoryData={politicalContributions} />}
+      {politicalContributions && <PoliticsCategory categoryData={politicalContributions} />}
       {lawsuits && <LawsuitsCategory categoryData={lawsuits} />}
     </main>
   ): <main>Sorry, no information was found.</main>;
