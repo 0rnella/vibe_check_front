@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './styles/index.scss';
 import About from './components/About';
+import Methodology from './components/Methodology';
 import Homepage from './components/Homepage';
 import Company from './components/Company';
 import * as serviceWorker from './serviceWorker';
@@ -11,6 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Route exact path='/about' component={About} />
+      <Route exact path='/methodology' component={Methodology} />
       <Route exact path='/' component={Homepage}/>
       <Route path ='/company/:id' component={Company}/>
     </Router>
