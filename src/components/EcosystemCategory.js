@@ -23,7 +23,7 @@ const EcosystemCategory = (props) => {
   };
   const demoNowPie = getPieChartData(demoNow);
 
-  const colorScale = ["D8A48F", "4D4D3F", "EFEBCE",  "A3A380", "6F493D" ];
+  const colorScale = ["#D8A48F", "#4D4D3F", "#EFEBCE",  "#A3A380", "#6F493D" ];
 
   return (
     <section className={`category ecosystem ${styling}`}>

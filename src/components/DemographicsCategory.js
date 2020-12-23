@@ -38,8 +38,8 @@ const DemographicsCategory = (props) => {
     multiracial: 0.028
   };
 
-  const raceColorScale = ["D8A48F", "4D4D3F", "EFEBCE", "A3A380", "6F493D"];
-  const genderColorScale = ["2AB7CA", "FE4A49", "EFEBCE"];
+  const raceColorScale = ["#D8A48F", "#4D4D3F", "#EFEBCE", "#A3A380", "#6F493D"];
+  const genderColorScale = ["#2AB7CA", "#FE4A49", "#EFEBCE"];
 
   return (
     <section className={`category demographics ${styling}`}>
@@ -64,7 +64,8 @@ const DemographicsCategory = (props) => {
                 {data.race.map(raceObj => {
                   const { x: raceName, y: percentage } = raceObj;
                   const difference = Math.round(100*(percentage - overallRace[raceName]));
-                  return <li>There are {difference > 0 ? `${difference}% more` : `${-difference}% fewer`} {raceName} employees</li>;
+
+                  return <li key={raceName}>There are {difference > 0 ? `${difference}% more` : `${-difference}% fewer`} {raceName} employees</li>;
                 })}
               </ul>
             </div>}

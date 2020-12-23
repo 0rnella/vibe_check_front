@@ -14,7 +14,7 @@ const PoliticsCategory = (props) => {
 
   const pacPieChartData = getPieChartData(pacData);
 
-  const politicsColorScale = ["2AB7CA", "FE4A49"];
+  const politicsColorScale = ["#2AB7CA", "#FE4A49"];
 
   return (
     <section className={`category demographics ${styling}`}>
