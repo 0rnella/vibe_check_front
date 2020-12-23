@@ -34,9 +34,9 @@ function CompanyInfo (props) {
         </div>
       </section>}
       {demographics && <DemographicsCategory categoryData={demographics}/> }
-      {effectOnEcosystem && <EcosystemCategory categoryData={effectOnEcosystem}/> }
       {politicalContributions && <PoliticsCategory categoryData={politicalContributions} />}
       {lawsuits && <LawsuitsCategory categoryData={lawsuits} />}
+      {effectOnEcosystem && <EcosystemCategory categoryData={effectOnEcosystem}/> }
     </main>
   ): <main>Sorry, no information was found.</main>;
 }
