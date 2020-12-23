@@ -7,21 +7,33 @@ import PoliticsCategory from './PoliticsCategory';
 
 function CompanyInfo (props) {
   const { companyData } = props;
-  const { effectOnEcosystem, politicalContributions, lawsuits, demographics } = companyData;
+  const {
+    name,
+    logo,
+    description,
+    yearFounded,
+    currentCEO,
+    annualNetRevenue,
+    effectOnEcosystem,
+    politicalContributions,
+    lawsuits,
+    demographics,
+
+  } = companyData;
 
   return companyData ? (
     <main>
       <section className="company-header">
-        <img className="single-company-logo" src={props.companyData.logo} alt={`${props.companyData.name} logo`}/>
+        {logo && <img className="single-company-logo" src={logo} alt={`${name} logo`}/>}
         <div>
-          <h1 className="company-name">{props.companyData.name}</h1>
+          <h1 className="company-name">{name}</h1>
         </div>
       </section>
       <section className="category company-snapshot">
-        <p> {props.companyData.description}</p>
-        <h4>Year Founded: {props.companyData.yearFounded}</h4>
-        <h4>Current CEO: {props.companyData.currentCEO}</h4>
-        <h4>Annual Net Revenue: ${props.companyData.annualNetRevenue}</h4>
+        <p> {description}</p>
+        <h4>Year Founded: {yearFounded}</h4>
+        <h4>Current CEO: {currentCEO}</h4>
+        <h4>Annual Net Revenue: ${annualNetRevenue}</h4>
       </section>
       {demographics && <DemographicsCategory categoryData={demographics}/> }
       {effectOnEcosystem && <EcosystemCategory categoryData={effectOnEcosystem}/> }

@@ -7,6 +7,7 @@ function Nav (props) {
     <nav className="main-nav">
       <Link to='/'>Home</Link>
       <Link to='/about'>About</Link>
+      <Link to='/methodology'>Methodology</Link>
     </nav>
   );
 }

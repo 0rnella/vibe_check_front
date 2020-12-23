@@ -36,7 +36,7 @@ class Homepage extends React.Component {
         <header className="App-header">
           <h1>Vibe Check</h1>
           <Nav />
-          <p>Find out what your favorite companies are really about.</p>
+          <p>Make better, more informed decisions about where you buy.</p>
         </header>
         <div className="icon-group">
           {this.state.companiesData.map(company => {
