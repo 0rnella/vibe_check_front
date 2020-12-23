@@ -5,7 +5,9 @@ import Nav from './Nav';
 function CompanyIcon (props) {
   return (
     <div className="company-widget">
-      <img className="company-logo" src={props.imageSource} alt={props.name + " logo"} />
+      <Link className="company-logo" to={`/company/${props.id}`}>
+        <img src={props.imageSource} alt={props.name + " logo"} />
+      </Link>
       <h3>{props.name}</h3>
     </div>
   );
@@ -41,9 +43,7 @@ class Homepage extends React.Component {
         <div className="icon-group">
           {this.state.companiesData.map(company => {
             const { logo, name, id } = company;
-            return (<Link to={`/company/${id}`} key={name}>
-              <CompanyIcon imageSource={logo} name={name} />
-            </Link>);
+            return <CompanyIcon imageSource={logo} name={name} id={id} />;
           })}
         </div>
       </div>

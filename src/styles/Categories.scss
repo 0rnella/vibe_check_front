@@ -1,13 +1,8 @@
 .category {
   padding: 20px;
-  margin: 12px;
+  margin: 20px 0;
   text-align: left;
-  border: 4px solid black;
-  border-radius: 8px;
-
-  // &.company-snapshot {
-  //   border: none;
-  // }
+  border-bottom: 8px solid $accent;
 
   &.lawsuits {
     .grid {
@@ -47,8 +42,8 @@
   }
 
   h3 {
+    font-size: 1.6em;
     text-align: center;
-    text-transform: uppercase;
     letter-spacing: .03em;
   }
 }

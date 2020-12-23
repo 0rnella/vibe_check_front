@@ -17,8 +17,8 @@ const PoliticsCategory = (props) => {
   const politicsColorScale = ["#2AB7CA", "#FE4A49"];
 
   return (
-    <section className={`category demographics ${styling}`}>
-      <h3>Political contributions</h3>
+    <section id="political-contributions" className={`category demographics ${styling}`}>
+      <h3><a href="#political-contributions">Political contributions</a></h3>
 
       <h4>PAC Contributions in 2020</h4>
       {categoryData.pacTotal ? <div className='grid'>

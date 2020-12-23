@@ -23,16 +23,16 @@ function CompanyInfo (props) {
 
   return companyData ? (
     <main>
-      <section className="company-header">
-        {logo && <img className="single-company-logo" src={logo} alt={`${name} logo`}/>}
-        <h1 className="company-name">{name}</h1>
-      </section>
-      <section className="category company-snapshot">
-        <p> {description}</p>
-        <h4>Year Founded: {yearFounded}</h4>
-        <h4>Current CEO: {currentCEO}</h4>
-        <h4>Annual Net Revenue: ${annualNetRevenue}</h4>
-      </section>
+      {logo && <section className="company-header">
+        <img className="single-company-logo" src={logo} alt={`${name} logo`}/>
+        <div className="company-overview">
+          <h1 className="company-name">{name}</h1>
+          <p>{description}</p>
+          <p>Year Founded: {yearFounded}</p>
+          <p>Current CEO: {currentCEO}</p>
+          <p>Annual Net Revenue: ${annualNetRevenue}</p>
+        </div>
+      </section>}
       {demographics && <DemographicsCategory categoryData={demographics}/> }
       {effectOnEcosystem && <EcosystemCategory categoryData={effectOnEcosystem}/> }
       {politicalContributions && <PoliticsCategory categoryData={politicalContributions} />}

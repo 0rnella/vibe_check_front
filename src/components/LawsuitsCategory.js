@@ -1,12 +1,11 @@
 import React from 'react';
 
-
 const LawsuitsCategory = (props) => {
   const { categoryData, styling } = props;
 
   return (
-    <section className={`category lawsuits ${styling}`}>
-      <h3>Lawsuits and settlements</h3>
+    <section id="lawsuits" className={`category lawsuits ${styling}`}>
+      <h3><a href="#lawsuits">Lawsuits and settlements</a></h3>
 
       <div className='grid'>
         <div className='item'>

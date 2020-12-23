@@ -26,8 +26,8 @@ const EcosystemCategory = (props) => {
   const colorScale = ["#D8A48F", "#4D4D3F", "#EFEBCE",  "#A3A380", "#6F493D" ];
 
   return (
-    <section className={`category ecosystem ${styling}`}>
-      <h3>effects on ecosystem</h3>
+    <section id="ecosystem" className={`category ecosystem ${styling}`}>
+      <h3><a href='#ecosystem'>Effects on Ecosystem</a></h3>
 
       <h4>Racial Demographics</h4>
       {categoryData.racialDemographicNarrative && <p>{categoryData.racialDemographicNarrative}</p>}

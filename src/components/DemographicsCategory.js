@@ -42,8 +42,8 @@ const DemographicsCategory = (props) => {
   const genderColorScale = ["#2AB7CA", "#FE4A49", "#EFEBCE"];
 
   return (
-    <section className={`category demographics ${styling}`}>
-      <h3>Demographics</h3>
+    <section id="demographics" className={`category demographics ${styling}`}>
+      <h3><a href="#demographics">Demographics</a></h3>
 
       {pieChartData.map(data => (
         <Fragment key={data.population}>
