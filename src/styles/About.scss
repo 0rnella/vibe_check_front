@@ -1,13 +1,16 @@
-.group-member {
-  display: flex;
+.about {
   text-align: left;
-  margin: 80px 20px 40px 20px;
 
-  .member-pic {
-    width: 200px;
-  }
-
-  .member-bio {
-    margin-left: 25px;
+  .group-member {
+    display: flex;
+    margin: 80px 20px 40px 20px;
+  
+    .member-pic {
+      width: 200px;
+    }
+  
+    .member-bio {
+      margin-left: 25px;
+    }
   }
 }
