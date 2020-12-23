@@ -7,7 +7,6 @@ function CompanyIcon (props) {
     <div className="company-widget">
       <img className="company-logo" src={props.imageSource} alt={props.name + " logo"} />
       <h3>{props.name}</h3>
-      <h4>Rating: {props.rating}</h4>
     </div>
   );
 }
@@ -41,9 +40,9 @@ class Homepage extends React.Component {
         </header>
         <div className="icon-group">
           {this.state.companiesData.map(company => {
-            const { logo, name, id, rating } = company;
+            const { logo, name, id } = company;
             return (<Link to={`/company/${id}`} key={name}>
-              <CompanyIcon imageSource={logo} name={name} rating={rating} />
+              <CompanyIcon imageSource={logo} name={name} />
             </Link>);
           })}
         </div>

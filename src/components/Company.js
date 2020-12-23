@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import Header from './Header';
-import { CategorySection } from './CategorySections';
 import EcosystemCategory from './EcosystemCategory';
 import LawsuitsCategory from './LawsuitsCategory';
 import DemographicsCategory from './DemographicsCategory';
@@ -16,7 +15,6 @@ function CompanyInfo (props) {
         <img className="single-company-logo" src={props.companyData.logo} alt={`${props.companyData.name} logo`}/>
         <div>
           <h1 className="company-name">{props.companyData.name}</h1>
-          <h4 className="company-rating">Rating: {props.companyData.rating}</h4>
         </div>
       </section>
       <section className="category company-snapshot">

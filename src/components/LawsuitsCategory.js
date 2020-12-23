@@ -6,7 +6,7 @@ const LawsuitsCategory = (props) => {
 
   return (
     <section className={`category lawsuits ${styling}`}>
-      <h3>Lawsuits and settlements: {categoryData.rating}</h3>
+      <h3>Lawsuits and settlements</h3>
 
       <div className='grid'>
         <div className='item'>

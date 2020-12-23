@@ -29,12 +29,21 @@ const DemographicsCategory = (props) => {
     };
   });
 
+  const overallRace = {
+    white: 0.763,
+    black: 0.134,
+    asian: 0.059,
+    latinx: 0.185,
+    indigenous: 0.015,
+    multiracial: 0.028
+  };
+
   const raceColorScale = ["D8A48F", "4D4D3F", "EFEBCE", "A3A380", "6F493D"];
   const genderColorScale = ["2AB7CA", "FE4A49", "EFEBCE"];
 
   return (
     <section className={`category demographics ${styling}`}>
-      <h3>Demographics: {categoryData.rating}</h3>
+      <h3>Demographics</h3>
 
       {pieChartData.map(data => (
         <Fragment key={data.population}>
@@ -48,6 +57,13 @@ const DemographicsCategory = (props) => {
                 <VictoryPie data={data.race} colorScale={raceColorScale} padding={70} /> :
                 'We were not able to find data.'}
             </div>
+
+            {data.race.length && <div className='item'>
+              {data.race.map(raceObj => {
+                const { x: raceName, y: percentage } = raceObj;
+                return <p>There are {Math.round(100*(percentage - overallRace[raceName]))}% more {raceName} employees than in the general population</p>;
+              })}
+            </div>}
 
             <div className='item'>
               <h5>Gender</h5>

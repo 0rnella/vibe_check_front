@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { VictoryPie } from 'victory';
 import { getPieChartData } from '../utils/index';
 
@@ -18,7 +18,7 @@ const PoliticsCategory = (props) => {
 
   return (
     <section className={`category demographics ${styling}`}>
-      <h3>Political contributions: {categoryData.rating}</h3>
+      <h3>Political contributions</h3>
 
       <h4>PAC Contributions in 2020</h4>
       {categoryData.pacTotal ? <div className='grid'>

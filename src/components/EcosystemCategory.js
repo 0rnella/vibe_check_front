@@ -27,7 +27,7 @@ const EcosystemCategory = (props) => {
 
   return (
     <section className={`category ecosystem ${styling}`}>
-      <h3>Effects on ecosystem: {categoryData.rating}</h3>
+      <h3>Effects on ecosystem</h3>
 
       <h4>Racial demographics</h4>
       <p>{categoryData.racialDemographicNarrative}</p>
