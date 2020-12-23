@@ -45,6 +45,12 @@
   .number {      
     font-size: 2em;
   }
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+  }
 }
 
 @include mobile {

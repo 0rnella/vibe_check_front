@@ -25,9 +25,7 @@ function CompanyInfo (props) {
     <main>
       <section className="company-header">
         {logo && <img className="single-company-logo" src={logo} alt={`${name} logo`}/>}
-        <div>
-          <h1 className="company-name">{name}</h1>
-        </div>
+        <h1 className="company-name">{name}</h1>
       </section>
       <section className="category company-snapshot">
         <p> {description}</p>

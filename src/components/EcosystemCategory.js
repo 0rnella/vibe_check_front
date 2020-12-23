@@ -27,10 +27,10 @@ const EcosystemCategory = (props) => {
 
   return (
     <section className={`category ecosystem ${styling}`}>
-      <h3>Effects on ecosystem</h3>
+      <h3>effects on ecosystem</h3>
 
-      <h4>Racial demographics</h4>
-      <p>{categoryData.racialDemographicNarrative}</p>
+      <h4>Racial Demographics</h4>
+      {categoryData.racialDemographicNarrative && <p>{categoryData.racialDemographicNarrative}</p>}
       <div className='grid'>
         <div className='item'>
           <h5>HQ city before founding ({categoryData.firstCensusYear})</h5>
@@ -50,7 +50,7 @@ const EcosystemCategory = (props) => {
       </div>
 
 
-      <h4>Average household income</h4>
+      <h4>Average Household Income</h4>
       <div className='grid'>
         <div className='item'>
           <h5>HQ city before founding ({categoryData.firstCensusYear}): </h5>
@@ -69,10 +69,10 @@ const EcosystemCategory = (props) => {
         </div>
       </div>
 
-      <h4 className='jobs'>Jobs created: </h4>
+      <h4 className='jobs'>Jobs Created</h4>
       <p className='number'>{categoryData.jobsCreated}</p>
 
-      <h4>sources:</h4>
+      <h4>Sources</h4>
       <ul>
         <li>{categoryData.racialDemographicAtStartSource}</li>
         <li>{categoryData.racialDemographicNowSource}</li>
