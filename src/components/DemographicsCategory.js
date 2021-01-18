@@ -109,7 +109,7 @@ const DemographicsCategory = (props) => {
         </Fragment>
       ))}
 
-      <h4>sources:</h4>
+      <h4>Sources:</h4>
       <ul>
       </ul>
     </section>

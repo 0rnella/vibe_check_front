@@ -23,7 +23,7 @@ function MethodologyPage () {
           While we understand that the label of Hispanic/Latinx is not a racial category, we have included statistics regarding these individuals within the scope of this project, since the representation of Hispanic/Latinx individuals is statistically significant in the same way that racial identity is. We also know that white and Asian individuals are not typically underrepresented, which is why there is a difference in point assignment between white and Asian identities and all other non-white identies. Additionally, because multiracial identity and self-reporting is complex and often not reported in detailed segment (e.g. “Black and white” or “Asian and Latinx”), we have decided to assign a lower point value to account for this fact.
         </p>
         <p>
-          For our comparisons, we compare the most recent local racial demographics of each company to the overall racial demographics, in the same year, of the country each state is founded in. In this iteration, that source is: <a href="https://census.gov/prod/cen2010/briefs/c2010br-02.pdf" target="_blank">census.gov/prod/cen2010/briefs/c2010br-02.pdf</a>
+          For our comparisons, we compare the most recent local racial demographics of each company to the overall racial demographics, in the same year, of the country each state is founded in. In this iteration, that source is: <a href="https://census.gov/prod/cen2010/briefs/c2010br-02.pdf" target="_blank" rel="noopener noreferrer">census.gov/prod/cen2010/briefs/c2010br-02.pdf</a>
         </p>
 
         <h4>Lawsuits and Settlements</h4>

@@ -34,7 +34,7 @@ const PoliticsCategory = (props) => {
       {categoryData.executiveContributions ?
         <p>{categoryData.executiveContributions}</p> : 'We were not able to find data.'}
 
-      <h4>sources:</h4>
+      <h4>Sources:</h4>
       <ul>
         <li>{categoryData.sources}</li>
       </ul>
