@@ -83,24 +83,24 @@ const DemographicsCategory = (props) => {
             {<div className='item'>
               <p>Compared to the overall US population:</p>
               <ul>
-                {data.race.length && data.race.map(raceObj => {
+                {data.race.length ? data.race.map(raceObj => {
                   const { x: raceName, y: percentage } = raceObj;
                   const difference = Math.round(100*(percentage - overall[raceName]));
 
                   return <li key={raceName}>There are {difference > 0 ? `${difference}% more` : `${-difference}% fewer`} {raceName} employees</li>;
-                })}
-                {data.ethnicity.length && data.ethnicity.map(ethnicityObj => {
+                }) : ""}
+                {data.ethnicity.length ? data.ethnicity.map(ethnicityObj => {
                   const { x: ethnicity, y: percentage } = ethnicityObj;
                   const difference = Math.round(100*(percentage - overall[ethnicity]));
 
                   return <li key={ethnicity}>There are {difference > 0 ? `${difference}% more` : `${-difference}% fewer`} {ethnicity} employees</li>;
-                })}
-                {data.gender.length && data.gender.map(genderObj => {
+                }) : ""}
+                {data.gender.length ? data.gender.map(genderObj => {
                   const { x: gender, y: percentage } = genderObj;
                   const difference = Math.round(100*(percentage - overall[gender]));
 
                   return <li key={gender}>There are {difference > 0 ? `${difference}% more` : `${-difference}% fewer`} {gender} employees</li>;
-                })}
+                }) : ""}
               </ul>
             </div>}
 
