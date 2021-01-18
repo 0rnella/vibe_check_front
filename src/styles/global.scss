@@ -15,7 +15,7 @@ a {
 
 main {
   max-width: 1400px;
-  margin: 0 40px;
+  margin: 0 auto;
 }
 
 code {
@@ -28,19 +28,23 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.grid {
+.grid, .grid-4 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
+}
 
-  .item {
-    width: 50%;
-  }
+.grid .item {
+  width: 50%;
+}
+
+.grid-4 .item {
+    width: 25%;
 }
 
 @include mobile {
-  .grid {
+  .grid, .grid-4 {
     flex-direction: column;
 
     .item {

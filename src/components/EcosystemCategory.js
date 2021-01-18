@@ -33,7 +33,7 @@ const EcosystemCategory = (props) => {
       {categoryData.racialDemographicNarrative && <p>{categoryData.racialDemographicNarrative}</p>}
       <div className='grid'>
         <div className='item'>
-          <h5>HQ city before founding ({categoryData.firstCensusYear})</h5>
+          <h5>HQ State before founding ({categoryData.firstCensusYear})</h5>
           {demoStartPie.length ? <VictoryPie
             data={demoStartPie}
             colorScale={colorScale}
@@ -41,7 +41,7 @@ const EcosystemCategory = (props) => {
         </div>
 
         <div className='item'>
-          <h5>HQ city currently ({categoryData.currentCensusYear})</h5>
+          <h5>HQ State currently ({categoryData.currentCensusYear})</h5>
           {demoNowPie.length ? <VictoryPie
             data={demoNowPie}
             colorScale={colorScale}
@@ -53,7 +53,7 @@ const EcosystemCategory = (props) => {
       <h4>Average Household Income</h4>
       <div className='grid'>
         <div className='item'>
-          <h5>HQ city before founding ({categoryData.firstCensusYear}): </h5>
+          <h5>HQ State before founding ({categoryData.firstCensusYear}): </h5>
           {categoryData.averageHouseholdIncomeAtStart ?
             <span className='number'>${categoryData.averageHouseholdIncomeAtStart}</span>
             : <span>We were not able to find data.</span>
@@ -61,7 +61,7 @@ const EcosystemCategory = (props) => {
         </div>
 
         <div className='item'>
-          <h5>HQ city currently ({categoryData.currentCensusYear}): </h5>
+          <h5>HQ State currently ({categoryData.currentCensusYear}): </h5>
           {categoryData.averageHouseholdIncomeNow ?
             <span className='number'>${categoryData.averageHouseholdIncomeNow}</span>
             : <span>We were not able to find data.</span>

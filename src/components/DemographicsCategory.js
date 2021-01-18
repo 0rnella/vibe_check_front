@@ -57,7 +57,7 @@ const DemographicsCategory = (props) => {
         <Fragment key={data.population}>
           <h4>{startCase(data.population)}:</h4>
 
-          <div className="grid">
+          <div className="grid-4">
             <div className='item'>
 
               <h5>Race</h5>
@@ -81,6 +81,7 @@ const DemographicsCategory = (props) => {
             </div>
 
             {<div className='item'>
+              <h5>In perspective</h5>
               <p>Compared to the overall US population:</p>
               <ul>
                 {data.race.length ? data.race.map(raceObj => {
@@ -103,8 +104,6 @@ const DemographicsCategory = (props) => {
                 }) : ""}
               </ul>
             </div>}
-
-            
           </div>
 
         </Fragment>
