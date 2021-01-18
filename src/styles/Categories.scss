@@ -27,16 +27,6 @@
     }
   }
 
-  .grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    .item {
-      width: 50%;
-    }
-  }
-
   .number {      
     font-size: 2em;
   }
@@ -48,15 +38,4 @@
   }
 }
 
-@include mobile {
-  .category {
-    .grid {
-      flex-direction: column;
-
-      .item {
-        width: 100%;
-      }
-    }
-  }
-}
 

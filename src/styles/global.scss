@@ -28,3 +28,23 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  .item {
+    width: 50%;
+  }
+}
+
+@include mobile {
+  .grid {
+    flex-direction: column;
+
+    .item {
+      width: 100%;
+    }
+  }
+}

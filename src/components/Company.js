@@ -23,9 +23,9 @@ function CompanyInfo (props) {
 
   return companyData ? (
     <main>
-      {logo && <section className="company-header">
-        <img className="single-company-logo" src={logo} alt={`${name} logo`}/>
-        <div className="company-overview">
+      {logo && <section className="company-header grid">
+        <img className="single-company-logo item" src={logo} alt={`${name} logo`}/>
+        <div className="company-overview item">
           <h1 className="company-name">{name}</h1>
           <p>{description}</p>
           <p>Year Founded: {yearFounded}</p>
