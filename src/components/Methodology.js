@@ -8,7 +8,7 @@ function MethodologyPage () {
       <Header />
       <main>
         <h2>Methodology</h2>
-        <p>We chose a set of 25 companies that were commonly used by our group, and that we wanted to learn more about. All the data researched on each company is publicly available information. Sources are listed on each page.</p>
+        <p>We chose a set of 24 companies that were commonly used by our group, and that we wanted to learn more about. All the data researched on each company is publicly available information. Sources are listed on each page.</p>
 
         <h3>Notes</h3>
 
