@@ -6,6 +6,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   white-space: pre-line;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -25,7 +26,6 @@ code {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   font-size: 1.6em;
-
 }
 
 .grid, .grid-4 {
@@ -36,11 +36,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .grid .item {
-  width: 50%;
+  max-width: 50%;
+  flex: 0 0 50%;
 }
 
 .grid-4 .item {
-    width: 25%;
+  max-width: 25%;
+  flex: 0 0 25%;
 }
 
 @include mobile {
@@ -48,7 +50,8 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
 
     .item {
-      width: 100%;
+      max-width: 100%;
+      flex: 0 0 1;
     }
   }
 }

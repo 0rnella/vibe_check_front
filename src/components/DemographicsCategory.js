@@ -5,8 +5,6 @@ import startCase from 'lodash.startcase';
 
 
 const Comparison = (props) => {
-
-
   const { data } = props;
   const { race, ethnicity, gender } = data;
 
