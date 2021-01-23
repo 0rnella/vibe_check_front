@@ -5,6 +5,7 @@ import './styles/index.scss';
 import About from './components/About';
 import Methodology from './components/Methodology';
 import Homepage from './components/Homepage';
+import Footer from './components/Footer';
 import Company from './components/Company';
 import * as serviceWorker from './serviceWorker';
 
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route exact path='/methodology' component={Methodology} />
       <Route exact path='/' component={Homepage}/>
       <Route path ='/company/:id' component={Company}/>
+      <Footer />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

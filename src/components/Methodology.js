@@ -6,7 +6,7 @@ function MethodologyPage () {
   return (
     <Fragment>
       <Header />
-      <main>
+      <main className="info-page">
         <h2>Methodology</h2>
         <p>We chose a set of 24 companies that were commonly used by our group, and that we wanted to learn more about. All the data researched on each company is publicly available information. Sources are listed on each page.</p>
 

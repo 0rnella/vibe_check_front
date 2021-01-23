@@ -19,7 +19,7 @@ function AboutPage (props) {
   return (
     <Fragment>
       <Header />
-      <main className="about">
+      <main className="info-page">
         <h2>About</h2>
         <p>{aboutData.intro}</p>
         <h2>The team</h2>
