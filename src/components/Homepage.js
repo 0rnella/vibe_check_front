@@ -36,7 +36,7 @@ class Homepage extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Vibe Check</h1>
+          <h1><img className='App-logo' src='/vibecheck_logo.png' alt='Vibe Check' /></h1>
           <Nav />
           <p>Make better, more informed decisions about where you buy.</p>
         </header>

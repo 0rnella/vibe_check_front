@@ -6,20 +6,20 @@ import { getPieChartData } from '../utils/index';
 const EcosystemCategory = (props) => {
   const { categoryData, styling } = props;
   const demoStart = {
-    white: categoryData.whiteStart,
-    black: categoryData.blackStart,
-    asian: categoryData.asianStart,
-    indigenous: categoryData.indigenousStart,
-    multiracial: categoryData.multiracialStart,
+    White: categoryData.whiteStart,
+    Black: categoryData.blackStart,
+    Asian: categoryData.asianStart,
+    Indigenous: categoryData.indigenousStart,
+    Multiracial: categoryData.multiracialStart,
   };
   const demoStartPie = getPieChartData(demoStart);
 
   const demoNow = {
-    white: categoryData.whiteNow,
-    black: categoryData.blackNow,
-    asian: categoryData.asianNow,
-    indigenous: categoryData.indigenousNow,
-    multiracial: categoryData.multiracialNow,
+    White: categoryData.whiteNow,
+    Black: categoryData.blackNow,
+    Asian: categoryData.asianNow,
+    Indigenous: categoryData.indigenousNow,
+    Multiracial: categoryData.multiracialNow,
   };
   const demoNowPie = getPieChartData(demoNow);
 

@@ -13,21 +13,21 @@ export const getPieChartData = (data = {}) => {
 
 export const structureDemoData = (demoData) => {
   const race = {
-    white: demoData.white,
-    black: demoData.black,
-    asian: demoData.asian,
-    indigenous: demoData.indigenous,
-    multiracial: demoData.multiracial,
+    White: demoData.white,
+    Black: demoData.black,
+    Asian: demoData.asian,
+    Indigenous: demoData.indigenous,
+    Multiracial: demoData.multiracial,
   };
   
   const ethnicity = {
-    latinx: demoData.latinx,
-    'non-latinx': 1- demoData.latinx
+    Latinx: demoData.latinx,
+    'Non-Latinx': 1- demoData.latinx
   };
 
   const gender = {
-    men: demoData.men,
-    women: demoData.women
+    Men: demoData.men,
+    Women: demoData.women
   };
 
   return {
@@ -40,15 +40,15 @@ export const structureDemoData = (demoData) => {
 
 export const buildComparison = (demographic) => {
   const overall = {
-    white: 0.763,
-    black: 0.134,
-    asian: 0.059,
-    latinx: 0.185,
-    'non-latinx': 0.815,
-    indigenous: 0.015,
-    multiracial: 0.028,
-    women: 0.47,
-    men: 0.53
+    White: 0.763,
+    Black: 0.134,
+    Asian: 0.059,
+    Latinx: 0.185,
+    'Non-Latinx': 0.815,
+    Indigenous: 0.015,
+    Multiracial: 0.028,
+    Women: 0.47,
+    Men: 0.53
   };
 
   if (demographic.length) {

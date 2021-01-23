@@ -6,8 +6,8 @@ const PoliticsCategory = (props) => {
   const { categoryData, styling } = props;
 
   const pacData = {
-    democrats: categoryData.pacDemocratContributions,
-    republicans: categoryData.pacRepublicanContributions,
+    Democrats: categoryData.pacDemocratContributions,
+    Republicans: categoryData.pacRepublicanContributions,
   };
 
   console.log('pacData', pacData);
