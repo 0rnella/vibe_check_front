@@ -4,14 +4,21 @@
 
   .group-member {
     display: flex;
-    margin: 80px 20px 40px 20px;
+    padding: 20px 0;
   
     .member-pic {
-      width: 200px;
+      width: 100%;
     }
   
     .member-bio {
-      margin-left: 25px;
+      padding-left: 25px;
+      box-sizing: border-box;
     }
+  }
+}
+
+@include mobile {
+  .info-page .group-member .member-bio {
+    padding-left: 0;
   }
 }

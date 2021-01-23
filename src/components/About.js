@@ -4,9 +4,9 @@ import Header from './Header';
 
 function GroupMember (props) {
   return (
-    <div className='group-member'>
-      {props.image && <img className='member-pic' alt={props.name} src={props.image} />}
-      <div className='member-bio'>
+    <div className='group-member grid'>
+      {props.image && <img className='member-pic item' alt={props.name} src={props.image} />}
+      <div className='member-bio item'>
         <h3>{props.name}</h3>
         <p>{props.bio}</p>
         <a href={props.link} >Get in touch</a>
