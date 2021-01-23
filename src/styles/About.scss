@@ -7,7 +7,7 @@
     padding: 20px 0;
   
     .member-pic {
-      width: 100%;
+      width: 20%;
     }
   
     .member-bio {
@@ -18,7 +18,15 @@
 }
 
 @include mobile {
-  .info-page .group-member .member-bio {
-    padding-left: 0;
+  .info-page .group-member {
+    flex-direction: column;
+
+    .member-pic {
+      width: 100%;
+    }
+
+    .member-bio {
+      padding-left: 0;
+    }
   }
 }
